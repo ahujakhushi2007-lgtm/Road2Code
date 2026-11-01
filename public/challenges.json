@@ -1,0 +1,100 @@
+[
+  {
+    "topic": "JavaScript",
+    "question": "What does Array.map() return?",
+    "options": ["A new array", "The original array, changed", "Only the first item", "Nothing (undefined)"],
+    "answer": 0,
+    "explanation": "map() calls your function on every item and returns a new array of the results. The original array is not changed."
+  },
+  {
+    "topic": "JavaScript",
+    "question": "What does typeof null return?",
+    "options": ["\"null\"", "\"object\"", "\"undefined\"", "\"number\""],
+    "answer": 1,
+    "explanation": "typeof null is \"object\". It is a well-known bug from the first version of JavaScript that was never fixed."
+  },
+  {
+    "topic": "JavaScript",
+    "question": "Which operator checks both value and type?",
+    "options": ["=", "==", "===", "=>"],
+    "answer": 2,
+    "explanation": "=== is strict equality and does no type conversion, so '5' === 5 is false while '5' == 5 is true."
+  },
+  {
+    "topic": "React",
+    "question": "What does useState return?",
+    "options": ["Just the value", "An array: [value, setter]", "An object with get and set", "A promise"],
+    "answer": 1,
+    "explanation": "useState returns a pair that we destructure: const [count, setCount] = useState(0)."
+  },
+  {
+    "topic": "React",
+    "question": "Why does React need a key on list items?",
+    "options": ["To style each item", "To identify items between renders", "To sort the list", "It is only decoration"],
+    "answer": 1,
+    "explanation": "Keys let React match old and new items when a list changes, so it updates only the items that changed."
+  },
+  {
+    "topic": "JavaScript",
+    "question": "const arr = [1, 2]; arr.push(3); What happens?",
+    "options": ["TypeError: a const can't change", "arr becomes [1, 2, 3]", "arr stays [1, 2]", "SyntaxError"],
+    "answer": 1,
+    "explanation": "const locks the variable's reference, not the contents. push() changes the same array, so it is allowed."
+  },
+  {
+    "topic": "React",
+    "question": "When does a useEffect with an empty dependency array [] run?",
+    "options": ["On every render", "Once, after the first render", "Never", "Before the first render"],
+    "answer": 1,
+    "explanation": "With [] the effect runs once after the component first appears on screen, and its cleanup runs when the component is removed."
+  },
+  {
+    "topic": "JavaScript",
+    "question": "What is \"5\" + 2 in JavaScript?",
+    "options": ["7", "\"52\"", "NaN", "TypeError"],
+    "answer": 1,
+    "explanation": "When one side of + is a string, JavaScript turns the other side into a string too and joins them, giving \"52\"."
+  },
+  {
+    "topic": "React",
+    "question": "Which hook gives you direct access to a DOM element?",
+    "options": ["useState", "useEffect", "useRef", "useMemo"],
+    "answer": 2,
+    "explanation": "useRef returns a box with a .current property. Pass it to an element's ref and .current points to that DOM element."
+  },
+  {
+    "topic": "JavaScript",
+    "question": "What does [1, 2, 3].filter(n => n > 1) return?",
+    "options": ["[2, 3]", "[1]", "true", "2"],
+    "answer": 0,
+    "explanation": "filter() keeps the items for which the function returns true, so it returns a new array [2, 3]."
+  },
+  {
+    "topic": "React",
+    "question": "In React Router, what renders the matching child route inside a layout?",
+    "options": ["<Link />", "<Outlet />", "<Navigate />", "<Route />"],
+    "answer": 1,
+    "explanation": "A parent route renders <Outlet /> where its child routes should appear. That is how one Layout wraps every page."
+  },
+  {
+    "topic": "JavaScript",
+    "question": "What does e.preventDefault() do in a form's submit handler?",
+    "options": ["Clears the form", "Stops the page from reloading", "Validates the inputs", "Stops event bubbling"],
+    "answer": 1,
+    "explanation": "A form submit normally reloads the page. preventDefault() cancels that default action so React can handle the data."
+  },
+  {
+    "topic": "JavaScript",
+    "question": "What does JSON.stringify({ a: 1 }) return?",
+    "options": ["An object", "The string '{\"a\":1}'", "An array", "undefined"],
+    "answer": 1,
+    "explanation": "JSON.stringify turns a value into a JSON string. localStorage only stores strings, so we stringify before saving."
+  },
+  {
+    "topic": "React",
+    "question": "Which is the right way to add an item to an array in state?",
+    "options": ["items.push(item)", "setItems([...items, item])", "items[items.length] = item", "setItems(items.push(item))"],
+    "answer": 1,
+    "explanation": "State must be replaced, not changed in place. Spreading into a new array gives React a new reference, so it re-renders."
+  }
+]
